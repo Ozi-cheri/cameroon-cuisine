@@ -1,0 +1,17 @@
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment
+venv/
+
+
+env.py
+
+# Ignore Django migration files (optional)
+*/migrations/*.pyc
+*/migrations/__pycache__/
+db.sqlite3
+
+# Ignore system files
+.DS_Store
