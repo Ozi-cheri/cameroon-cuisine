@@ -1,0 +1,9 @@
+{% extends 'bookings/base.html' %}
+
+{% block content %}
+  <div class="container mt-5 text-center">
+    <h1 class="mb-4">Thank You!</h1>
+    <p>Your table has been successfully booked.</p>
+    <a href="{% url 'home' %}" class="btn btn-success mt-3">Return to Home</a>
+  </div>
+{% endblock %}
