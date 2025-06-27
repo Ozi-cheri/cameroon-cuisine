@@ -1,0 +1,9 @@
+{% extends 'bookings/base.html' %}
+
+{% block content %}
+  <div class="text-center">
+    <h1 class="mb-3">Welcome to Cameroon Cuisine</h1>
+    <p class="lead">Enjoy the rich taste of traditional Cameroonian dishes made fresh daily.</p>
+    <a href="{% url 'booking_form' %}" class="btn btn-primary mt-4">Make a Reservation</a>
+  </div>
+{% endblock %}
