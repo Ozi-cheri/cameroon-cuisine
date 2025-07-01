@@ -19,3 +19,12 @@ def booking_success(request):
 
 def menu(request):
     return render(request, 'bookings/menu.html')
+
+def login_view(request):
+    return render(request, 'bookings/login.html')
+
+def signup_view(request):
+    return render(request, 'bookings/signup.html')
+
+def contact_view(request):
+    return render(request, 'bookings/contact.html')
