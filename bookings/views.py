@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import BookingForm
+from .forms import ContactForm
 
 def home(request):
     return render(request, 'bookings/home.html')
@@ -28,3 +29,20 @@ def signup_view(request):
 
 def contact_view(request):
     return render(request, 'bookings/contact.html')
+
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Simulate sending email or just print
+            print("Contact message received:", form.cleaned_data)
+            return render(request, 'bookings/contact_success.html', {'form': form})
+    else:
+        form = ContactForm()
+    return render(request, 'bookings/contact.html', {'form': form})
+
+
+def contact_success(request):
+    return render(request, 'bookings/contact_success.html')
+
+

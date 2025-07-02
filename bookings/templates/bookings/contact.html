@@ -1,13 +1,10 @@
-{% extends "bookings/base.html" %}
+{% extends 'bookings/base.html' %}
 
 {% block content %}
-<div class="container mt-5">
-    <h2>Contact Us</h2>
-    <p>If you have any questions or need assistance, please reach out to us:</p>
-    <ul>
-        <li>Email: info@camerooncuisine.com</li>
-        <li>Phone: +237 123 456 789</li>
-        <li>Address: 123 Douala Street, Cameroon</li>
-    </ul>
-</div>
+  <h2>Contact Us</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Send</button>
+  </form>
 {% endblock %}
